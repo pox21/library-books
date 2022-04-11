@@ -1,0 +1,102 @@
+.fields {
+  display: flex;
+  justify-content: space-between;
+
+  &__block {
+    position: relative;
+    z-index: 2;
+
+    @include laptop {
+      width: 100%;
+      max-width: 142px;
+    }
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 130%;
+    background-color: transparent;
+    border: none;
+    color: var(--color-light);
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    @include laptop {
+      font-size: 14px;
+      width: 100%;
+    }
+  }
+  &__btn_sort {
+
+  }
+  &__text {
+
+  }
+  &__list {
+    display: none;
+    padding: 15px;
+    position: absolute;
+    top: calc(100% + 3px);
+
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+
+    @include laptop {
+      top: calc(100% + 20px);
+    }
+    &_active {
+      display: block;
+    }
+
+    &_sort {
+      left: 0;
+      @media (max-width: 375px) {
+        left: -8px;
+      }
+    }
+
+    &_filter {
+      right: 0;
+      @media (max-width: 375px) {
+        right: -8px;
+      }
+
+      @include laptop {
+        display: block;
+      }
+    }
+  }
+  &__list_sort {
+
+  }
+  &__item {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+  &__button {
+    padding: 8px;
+    white-space: nowrap;
+    border-radius: 16px;
+    background-color: var(--color-secondory);
+    border: none;
+    font-size: 12px;
+    line-height: 100%;
+  }
+  &__btn_filter {
+
+  }
+  &__list_filter {
+
+  }
+}

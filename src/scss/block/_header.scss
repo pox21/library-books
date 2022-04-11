@@ -1,0 +1,65 @@
+.header {
+  padding: 8px 0;
+  @include tablet {
+    padding: 20px 0 15px;
+  }
+
+  @include desktop {
+    padding: 30px 0 35px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: inline-block;
+    height: 41px;
+
+    @include laptop {
+      height: 66px;
+    }
+  }
+
+  &__logo-img {
+    height: 100%;
+  }
+
+  &__btn-add {
+    display: none;
+
+    @include laptop {
+      display: inline-block;
+      width: 320px;
+      height: 50px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      border-radius: 8px;
+      background-color: var(--color-primary);
+      border-color: transparent;
+      color: var(--color-light);
+      margin-right: 102px;
+      margin-left: auto;
+    }
+  }
+
+  &__btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center right;
+    background-color: transparent;
+    color: var(--color-light);
+
+    &_search {
+      background-image: url("../img/search.svg");
+    }
+
+  }
+
+}

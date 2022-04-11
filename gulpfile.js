@@ -71,7 +71,7 @@ export const scss = () => gulp
     .pipe(gulpif(!dev, autoprefixer({
         cascade: false,
     })))
-    .pipe(gulpif(!dev, gcmq()))
+    .pipe(gcmq())
     .pipe(gulpif(!dev, gulp.dest(path.dist.css)))
     .pipe(gulpif(!dev, cleanCSS({
         2: {
@@ -163,7 +163,7 @@ export const js = () => gulp
 
 export const copy = () => gulp
     .src(path.src.assets, {
-        base: path.dist.base,
+        base: path.src.base,
     })
     .pipe(gulp.dest(path.dist.base))
     .pipe(browserSync.stream({

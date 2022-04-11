@@ -1,0 +1,40 @@
+:root {
+  --color-dark: #000000;
+  --color-dark2: #181818;
+  --color-light: #ffffff;
+  --color-gray: #aeaaaa;
+  --color-primary: #f87c09;
+  --color-primary-light: #ff922e;
+  --color-secondory: #eaeaea;
+  --color-secondory-dark: #6b6b6b;
+
+  --footer-height: 74px;
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content
+  }
+}
+@mixin laptop {
+  @media (min-width: 1024px) {
+    @content
+  }
+}
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content
+  }
+}
+
+@mixin font($name, $weight) {
+  @font-face {
+    font: {
+      family: $name;
+      weight: $weight;
+      display: swap;
+    }
+    src: url("../fonts/#{ $name }-#{ $weight }.woff2") format("woff2"),
+        url("../fonts/#{ $name }-#{ $weight }.woff") format("woff");
+  }
+}

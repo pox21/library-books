@@ -1,0 +1,17 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: var(--footer-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-dark);
+
+  @media (max-height: 400px) {
+    width: auto;
+    right: 20px;
+    background-color: transparent;
+  }
+}
